@@ -2,7 +2,7 @@
 
 Machine learning engineer working on reinforcement learning, graph neural
 networks, forecasting systems, and the infrastructure needed to evaluate models
-honestly.
+honestly in production-like settings.
 
 I like projects where the model is only one part of the system: data quality,
 simulation, replay, calibration, deployment, and postmortems all matter.
