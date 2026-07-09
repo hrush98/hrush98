@@ -1,39 +1,84 @@
-<svg width="560" height="300" viewBox="0 0 560 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="720" height="420" viewBox="0 0 720 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">SleeperService architecture</title>
-  <desc id="desc">Esports market discovery, historical research, priors, and read-only analysis APIs.</desc>
+  <desc id="desc">SleeperService is an experimental esports-focused Polymarket trading engine with live data feeds, strategy modules, risk controls, order execution, and audit trails.</desc>
   <defs>
-    <linearGradient id="card" x1="0" y1="0" x2="560" y2="300" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#211827"/>
-      <stop offset="1" stop-color="#121018"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="720" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1d1425"/>
+      <stop offset="1" stop-color="#0f0c15"/>
     </linearGradient>
     <style>
-      .label{font:600 18px ui-sans-serif,system-ui;fill:#f8fafc}
-      .small{font:500 13px ui-sans-serif,system-ui;fill:#f5d0fe}
-      .box{fill:#24182f;stroke:#49334f;stroke-width:1.5}
-      .arrow{stroke:#d946ef;stroke-width:2.5;marker-end:url(#arrow)}
+      .title{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:24px;fill:#fdf2f8}
+      .sub{font-family:Arial,Helvetica,sans-serif;font-weight:500;font-size:14px;fill:#f0abfc}
+      .box{fill:#24142d;stroke:#7e2f59;stroke-width:1.5}
+      .risk{fill:#2a1624;stroke:#db2777;stroke-width:1.6}
+      .label{font-family:Arial,Helvetica,sans-serif;font-weight:650;font-size:14px;fill:#faf5ff}
+      .small{font-family:Arial,Helvetica,sans-serif;font-weight:500;font-size:11.5px;fill:#f5d0fe}
+      .arrow{stroke:#d946ef;stroke-width:2.4;marker-end:url(#arrow)}
+      .blue{stroke:#60a5fa;stroke-width:2.2;marker-end:url(#blueArrow)}
+      .audit{stroke:#f472b6;stroke-width:2;stroke-dasharray:7 6;marker-end:url(#pinkArrow)}
     </style>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
       <path d="M0,0 L0,6 L9,3 z" fill="#d946ef"/>
     </marker>
+    <marker id="blueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#60a5fa"/>
+    </marker>
+    <marker id="pinkArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f472b6"/>
+    </marker>
   </defs>
-  <rect width="560" height="300" rx="18" fill="url(#card)" stroke="#3a2a44"/>
-  <text x="28" y="42" class="label">SleeperService</text>
-  <text x="28" y="66" class="small">private esports-focused analysis and research platform</text>
-  <rect x="30" y="96" width="126" height="84" rx="10" class="box"/>
-  <text x="56" y="125" class="small">markets</text>
-  <text x="54" y="145" class="small">odds feeds</text>
-  <text x="54" y="165" class="small">historical</text>
-  <rect x="216" y="86" width="130" height="104" rx="10" class="box"/>
-  <text x="247" y="118" class="small">research</text>
-  <text x="252" y="140" class="small">priors</text>
-  <text x="238" y="162" class="small">calibration</text>
-  <rect x="406" y="82" width="122" height="72" rx="10" class="box"/>
-  <text x="436" y="111" class="small">ranked</text>
-  <text x="424" y="131" class="small">opportunities</text>
-  <rect x="406" y="184" width="122" height="56" rx="10" class="box"/>
-  <text x="430" y="216" class="small">API v0</text>
-  <path d="M156 138H213" class="arrow"/>
-  <path d="M346 126H403" class="arrow"/>
-  <path d="M467 155V181" class="arrow"/>
-  <text x="130" y="260" class="small">source material for sanitized LoL analytics bot</text>
+  <rect width="720" height="420" rx="22" fill="url(#bg)" stroke="#39213f"/>
+  <text x="32" y="46" class="title">SleeperService</text>
+  <text x="32" y="70" class="sub">experimental esports-focused Polymarket trading engine</text>
+
+  <rect x="28" y="100" width="150" height="178" rx="14" class="box"/>
+  <text x="67" y="126" class="label">Live feeds</text>
+  <text x="48" y="156" class="small">OddsPapi esports odds</text>
+  <text x="48" y="180" class="small">Goalserve LoL state</text>
+  <text x="48" y="204" class="small">Polymarket Gamma</text>
+  <text x="48" y="228" class="small">CLOB + market WS</text>
+  <text x="48" y="252" class="small">user execution WS</text>
+
+  <rect x="226" y="96" width="116" height="70" rx="12" class="box"/>
+  <text x="250" y="125" class="label">Fixture</text>
+  <text x="247" y="146" class="small">mapping</text>
+  <rect x="226" y="204" width="116" height="74" rx="12" class="box"/>
+  <text x="250" y="232" class="label">Live edge</text>
+  <text x="256" y="253" class="small">monitor</text>
+
+  <rect x="390" y="82" width="132" height="44" rx="10" class="box"/>
+  <text x="416" y="109" class="label">Lead-lag</text>
+  <rect x="390" y="142" width="132" height="44" rx="10" class="box"/>
+  <text x="408" y="169" class="label">Complement arb</text>
+  <rect x="390" y="202" width="132" height="44" rx="10" class="box"/>
+  <text x="406" y="229" class="label">Market coherence</text>
+  <rect x="390" y="262" width="132" height="44" rx="10" class="box"/>
+  <text x="407" y="289" class="label">Gold-diff edge</text>
+  <text x="407" y="340" class="small">strategy modules</text>
+
+  <rect x="574" y="90" width="116" height="86" rx="12" class="risk"/>
+  <text x="601" y="123" class="label">Risk gates</text>
+  <text x="594" y="146" class="small">kill switch</text>
+  <text x="594" y="164" class="small">allowances</text>
+  <rect x="574" y="216" width="116" height="88" rx="12" class="risk"/>
+  <text x="596" y="248" class="label">Execution</text>
+  <text x="593" y="270" class="small">order manager</text>
+  <text x="593" y="288" class="small">live/paper paths</text>
+
+  <rect x="94" y="326" width="494" height="54" rx="12" fill="#251325" stroke="#7e2f59"/>
+  <text x="266" y="348" class="label">Postgres audit trail</text>
+  <text x="126" y="368" class="small">positions | order attempts | trade events | snapshots | replay diagnostics</text>
+
+  <path d="M178 188H222" class="arrow"/>
+  <path d="M284 166V200" class="arrow"/>
+  <path d="M342 240C366 240 362 104 386 104" class="blue"/>
+  <path d="M342 240H386" class="blue"/>
+  <path d="M342 240C366 240 362 224 386 224" class="blue"/>
+  <path d="M342 240C366 240 362 284 386 284" class="blue"/>
+  <path d="M522 104H570" class="arrow"/>
+  <path d="M522 164H570" class="arrow"/>
+  <path d="M522 224H570" class="arrow"/>
+  <path d="M632 176V212" class="arrow"/>
+  <path d="M284 278V322" class="audit"/>
+  <path d="M632 304C620 338 602 352 590 352" class="audit"/>
 </svg>
