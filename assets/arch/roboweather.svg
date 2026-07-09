@@ -1,0 +1,40 @@
+<svg width="560" height="300" viewBox="0 0 560 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">RoboWeather architecture</title>
+  <desc id="desc">Weather observations, forecast guidance, and market data flow into calibrated models, replay ledgers, and outcome analysis.</desc>
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="560" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172033"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .label{font:600 18px ui-sans-serif,system-ui;fill:#f8fafc}
+      .small{font:500 13px ui-sans-serif,system-ui;fill:#dbeafe}
+      .box{fill:#13233b;stroke:#334155;stroke-width:1.5}
+      .arrow{stroke:#60a5fa;stroke-width:2.5;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="560" height="300" rx="18" fill="url(#card)" stroke="#2b3a50"/>
+  <text x="28" y="42" class="label">RoboWeather</text>
+  <text x="28" y="66" class="small">forecasting, calibration, replay, and outcome resolution</text>
+  <rect x="28" y="98" width="124" height="92" rx="10" class="box"/>
+  <text x="55" y="126" class="small">ASOS</text>
+  <text x="54" y="146" class="small">HRRR</text>
+  <text x="42" y="166" class="small">market books</text>
+  <rect x="212" y="90" width="134" height="108" rx="10" class="box"/>
+  <text x="242" y="122" class="small">features</text>
+  <text x="246" y="144" class="small">models</text>
+  <text x="230" y="166" class="small">calibration</text>
+  <rect x="404" y="82" width="124" height="78" rx="10" class="box"/>
+  <text x="431" y="112" class="small">fair value</text>
+  <text x="431" y="132" class="small">signals</text>
+  <rect x="404" y="188" width="124" height="56" rx="10" class="box"/>
+  <text x="430" y="220" class="small">replay</text>
+  <path d="M152 144H209" class="arrow"/>
+  <path d="M346 134H401" class="arrow"/>
+  <path d="M466 161V185" class="arrow"/>
+  <path d="M404 221C286 254 174 239 91 192" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="143" y="263" class="small">resolved outcomes feed probability calibration</text>
+</svg>

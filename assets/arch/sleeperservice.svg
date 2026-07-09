@@ -1,0 +1,39 @@
+<svg width="560" height="300" viewBox="0 0 560 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SleeperService architecture</title>
+  <desc id="desc">Esports market discovery, historical research, priors, and read-only analysis APIs.</desc>
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="560" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#211827"/>
+      <stop offset="1" stop-color="#121018"/>
+    </linearGradient>
+    <style>
+      .label{font:600 18px ui-sans-serif,system-ui;fill:#f8fafc}
+      .small{font:500 13px ui-sans-serif,system-ui;fill:#f5d0fe}
+      .box{fill:#24182f;stroke:#49334f;stroke-width:1.5}
+      .arrow{stroke:#d946ef;stroke-width:2.5;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#d946ef"/>
+    </marker>
+  </defs>
+  <rect width="560" height="300" rx="18" fill="url(#card)" stroke="#3a2a44"/>
+  <text x="28" y="42" class="label">SleeperService</text>
+  <text x="28" y="66" class="small">private esports-focused analysis and research platform</text>
+  <rect x="30" y="96" width="126" height="84" rx="10" class="box"/>
+  <text x="56" y="125" class="small">markets</text>
+  <text x="54" y="145" class="small">odds feeds</text>
+  <text x="54" y="165" class="small">historical</text>
+  <rect x="216" y="86" width="130" height="104" rx="10" class="box"/>
+  <text x="247" y="118" class="small">research</text>
+  <text x="252" y="140" class="small">priors</text>
+  <text x="238" y="162" class="small">calibration</text>
+  <rect x="406" y="82" width="122" height="72" rx="10" class="box"/>
+  <text x="436" y="111" class="small">ranked</text>
+  <text x="424" y="131" class="small">opportunities</text>
+  <rect x="406" y="184" width="122" height="56" rx="10" class="box"/>
+  <text x="430" y="216" class="small">API v0</text>
+  <path d="M156 138H213" class="arrow"/>
+  <path d="M346 126H403" class="arrow"/>
+  <path d="M467 155V181" class="arrow"/>
+  <text x="130" y="260" class="small">source material for sanitized LoL analytics bot</text>
+</svg>

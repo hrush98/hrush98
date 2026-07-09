@@ -32,8 +32,19 @@ simulation, replay, calibration, deployment, and postmortems all matter.
 | Project | What it shows | Status |
 | --- | --- | --- |
 | [`tinychat`](https://github.com/hrush98/tinychat) | Rust terminal chat router for OpenAI-compatible local/self-hosted language model endpoints, streaming output, profile routing, and debugging visibility. | Public |
+| [`footpump`](https://github.com/hrush98/footpump) | Early-pump discovery service for multi-chain token monitoring, enrichment, scoring, watchlists, and Hermes-facing APIs. | Public |
 | RoboWeather | Weather forecasting and market-research system with live observations, forecast guidance, calibration, replay ledgers, and outcome resolution. Public description is intentionally high-level. | Proprietary-sensitive |
 | SleeperService | Esports-focused Polymarket analysis platform. Good source material for a future sanitized LoL/esports analytics bot artifact, but not a repo to publish as-is. | Private |
+
+## Architecture Snapshots
+
+| TinyChat | Footpump |
+| --- | --- |
+| <a href="https://github.com/hrush98/tinychat"><img src="./assets/arch/tinychat.svg" alt="TinyChat architecture" /></a> | <a href="https://github.com/hrush98/footpump"><img src="./assets/arch/footpump.svg" alt="Footpump architecture" /></a> |
+
+| RoboWeather | SleeperService |
+| --- | --- |
+| <img src="./assets/arch/roboweather.svg" alt="RoboWeather architecture" /> | <img src="./assets/arch/sleeperservice.svg" alt="SleeperService architecture" /> |
 
 ## Working Style
 
