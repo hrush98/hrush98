@@ -27,6 +27,14 @@ simulation, replay, calibration, deployment, and postmortems all matter.
 - Keeping public work focused on clean artifacts while proprietary trading and
   execution systems stay high-level.
 
+## Research
+
+**[MPFlow: Learning Budgeted Max-Flow Optimization on the Lightning Network with
+Deep Graph Reinforcement Learning](https://arxiv.org/abs/2607.08703)**  
+arXiv, 2026. Graph RL for liquidity placement in the Bitcoin Lightning Network,
+evaluated on real network snapshots and deployed for production channel-open
+decisions.
+
 ## Selected Work
 
 | Project | What it shows | Status |
