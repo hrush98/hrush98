@@ -41,8 +41,8 @@ decisions.
 | --- | --- | --- |
 | [`tinychat`](https://github.com/hrush98/tinychat) | Rust terminal chat router for OpenAI-compatible local/self-hosted language model endpoints, streaming output, profile routing, and debugging visibility. | Public |
 | [`footpump`](https://github.com/hrush98/footpump) | Early-pump discovery service for multi-chain token monitoring, enrichment, scoring, watchlists, and Hermes-facing APIs. | Public |
-| RoboWeather | Weather forecasting and market-research system with live observations, forecast guidance, calibration, replay ledgers, and outcome resolution. Public description is intentionally high-level. | Proprietary-sensitive |
-| SleeperService | Esports-focused Polymarket analysis platform. Good source material for a future sanitized LoL/esports analytics bot artifact, but not a repo to publish as-is. | Private |
+| RoboWeather | Weather forecasting and market-research system with live observations, forecast guidance, calibration, replay ledgers, and outcome resolution. Public description is intentionally high-level. | Private |
+| SleeperService | Esports-focused Polymarket analysis platform with schedule/result ingestion, team and player features, chronological backtests, calibration reports, and bot-facing outputs. | Public |
 
 ## Architecture Snapshots
 
@@ -53,35 +53,6 @@ decisions.
 | RoboWeather | SleeperService |
 | --- | --- |
 | <img src="./assets/arch/roboweather.svg" alt="RoboWeather architecture" /> | <img src="./assets/arch/sleeperservice.svg" alt="SleeperService architecture" /> |
-
-## Working Style
-
-```text
-raw data -> schemas -> features -> model -> replay -> calibration -> decision trace
-```
-
-- Prefer reproducible research loops over one-off notebooks.
-- Measure live/replay gaps instead of assuming offline wins will survive contact
-  with production.
-- Treat failed runs as system diagnostics, not just bad experiments.
-
-## Public Artifact Roadmap
-
-The next clean portfolio piece should be a sanitized `lol-esports-bot` repo:
-
-- schedule and result ingestion
-- team/player feature builders
-- chronological backtests
-- calibration reports
-- CLI or Discord bot preview
-- sample data and tests only
-
-No credentials, paid datasets, real-money execution, or private strategy code.
-
-## Stack
-
-`Python` `PyTorch` `FastAPI` `SQLAlchemy` `Postgres` `SQLite` `DuckDB` `Rust`
-`Docker` `AWS` `Airflow` `MLflow-style tracking`
 
 <p align="center">
   <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hrush98&layout=compact&theme=github_dark&hide_border=true" />
