@@ -35,6 +35,10 @@ arXiv, 2026. Graph RL for liquidity placement in the Bitcoin Lightning Network,
 evaluated on real network snapshots and deployed for production channel-open
 decisions.
 
+<p align="center">
+  <img src="./assets/overview_teaser.png" alt="MPFlow overview: Lightning Network allocation as a Markov decision process with a GNN actor-critic policy" width="100%" />
+</p>
+
 ## Selected Work
 
 | Project | What it shows | Status |
