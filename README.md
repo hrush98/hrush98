@@ -45,10 +45,10 @@ decisions.
 
 | Project | What it shows | Status |
 | --- | --- | --- |
-| [`tinychat`](https://github.com/hrush98/tinychat) | Rust terminal chat router for OpenAI-compatible local/self-hosted language model endpoints, streaming output, profile routing, and debugging visibility. | Public |
-| [`footpump`](https://github.com/hrush98/footpump) | Early-pump discovery service for multi-chain token monitoring, enrichment, scoring, watchlists, and Hermes-facing APIs. | Public |
-| RoboWeather | Weather forecasting and market-research system with live observations, forecast guidance, calibration, replay ledgers, and outcome resolution. Public description is intentionally high-level. | Private |
-| [`sleeperservice`](https://github.com/hrush98/sleeperservice) | Esports-focused Polymarket analysis platform with schedule/result ingestion, team and player features, chronological backtests, calibration reports, and bot-facing outputs. | Public |
+| RoboWeather | Same-day temperature-market research system: live observations, forecast guidance, calibrated models, replay ledgers, and official outcome resolution. Public description stays high-level. | Private |
+| [`footpump`](https://github.com/hrush98/footpump) | Deterministic token-discovery engine: multi-source market adapters, acceleration scoring, watchlists, and a FastAPI surface for a downstream research agent. Not a trading bot. | Public |
+| [`sleeperservice`](https://github.com/hrush98/sleeperservice) | Deprecated Polymarket trading and analysis platform that started as a League of Legends lead-lag bot. Public case study for ingestion, adapters, strategy research, execution safeguards, and calibration. | Public · archived |
+| [`tinychat`](https://github.com/hrush98/tinychat) | v0.1 Rust terminal workbench for local/self-hosted OpenAI-compatible models: streaming chat, rules-based profile routing, and debug/latency traces. | Public · v0.1 |
 
 ## Architecture Snapshots
 
