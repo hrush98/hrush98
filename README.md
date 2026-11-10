@@ -5,7 +5,7 @@
 <h1 align="center">Harrison Rush</h1>
 
 <p align="center">
-  <strong>Machine learning engineer at <a href="https://github.com/AmbossTech">Amboss</a> · M.S. Computer Science, Georgia Tech</strong><br/>
+  <strong>Machine learning engineer - M.S. Computer Science, Georgia Tech</strong><br/>
   Graph RL, GNNs, forecasting, and evaluation systems for decisions under uncertainty.
 </p>
 
