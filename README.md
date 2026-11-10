@@ -17,25 +17,14 @@
   <img alt="Rust" src="https://img.shields.io/badge/rust-dev%20tools-b7410e?style=flat-square&logo=rust&logoColor=white">
 </p>
 
-I like projects where the model is only one part of the system: data quality,
-simulation, replay, calibration, deployment, and postmortems all matter.
-
-## Now
-
-- Building ML systems for constrained decision-making with reinforcement
-  learning, graph neural networks, and production-style evaluation.
-- Turning messy live data into replayable research loops, calibrated decisions,
-  and audit trails.
-- Keeping public work focused on clean artifacts while proprietary trading and
-  execution systems stay high-level.
-
 ## Research
 
 **[MPFlow: Learning Budgeted Max-Flow Optimization on the Lightning Network with
 Deep Graph Reinforcement Learning](https://arxiv.org/abs/2607.08703)**  
-arXiv, 2026. Graph RL for liquidity placement in the Bitcoin Lightning Network,
-evaluated on real network snapshots and deployed for production channel-open
-decisions.
+First-author arXiv preprint (2026). We used graph reinforcement learning to
+select which channels to open under a fixed liquidity budget. MPFlow
+outperformed heuristic baselines on unseen network snapshots and was deployed
+for 4,640 channel-open decisions across 30 managed nodes.
 
 <p align="center">
   <img src="./assets/overview_teaser.png" alt="MPFlow overview: Lightning Network allocation as a Markov decision process with a GNN actor-critic policy" width="100%" />
@@ -45,10 +34,10 @@ decisions.
 
 | Project | What it shows | Status |
 | --- | --- | --- |
-| RoboWeather | Same-day temperature-market research system: live observations, forecast guidance, calibrated models, replay ledgers, and official outcome resolution. Public description stays high-level. | Private |
-| [`footpump`](https://github.com/hrush98/footpump) | Deterministic token-discovery engine: multi-source market adapters, acceleration scoring, watchlists, and a FastAPI surface for a downstream research agent. Not a trading bot. | Public |
-| [`sleeperservice`](https://github.com/hrush98/sleeperservice) | Deprecated Polymarket trading and analysis platform that started as a League of Legends lead-lag bot. Public case study for ingestion, adapters, strategy research, execution safeguards, and calibration. | Public · archived |
-| [`tinychat`](https://github.com/hrush98/tinychat) | v0.1 Rust terminal workbench for local/self-hosted OpenAI-compatible models: streaming chat, rules-based profile routing, and debug/latency traces. | Public · v0.1 |
+| [RoboWeather](https://github.com/hrush98/roboweather) | Same-day temperature forecasting and evaluation. Re-scored 18 saved models on 4,364 station-days after discovering outcome leakage in the original evaluation. | Public research · funded trading paused |
+| [TinyChat](https://github.com/hrush98/tinychat) | Rust terminal client for local and self-hosted language models with streaming, rules-based routing, and latency traces. | MIT · v0.1 |
+| [Footpump](https://github.com/hrush98/footpump) | Multi-source crypto market data, explainable ranking, and persistent watchlists served through FastAPI. | Public |
+| [SleeperService](https://github.com/hrush98/sleeperservice) | Prediction-market research case study covering sports feed ingestion, historical replay, and execution safeguards. | Deprecated · public case study |
 
 ## Architecture Snapshots
 
